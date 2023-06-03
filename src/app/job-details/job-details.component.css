@@ -1,0 +1,414 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+}
+
+.nav_bg {
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.04);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 0 135px;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    width: 20%;
+    height: 20%;
+}
+
+.navbar .logo h2 {
+    font-family: 'Noto Sans', sans-serif;
+    color: #19A7CE;
+    font-size: 20px;
+}
+
+.navbar .logo h2 b {
+    font-size: 30px;
+    color: #7149C6;
+}
+
+.navbar .logo h2 span {
+    color: #E74646;
+    font-size: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.feature ul {
+    display: flex;
+    gap: 20px;
+}
+
+.feature ul li {
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.feature ul .home {
+    font-weight: 700;
+    font-size: 17px;
+    color: #444444;
+}
+
+.feature ul li:hover {
+    color: #19A7CE;
+
+}
+
+.nav_btn {
+    right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_btn button {
+    width: 80px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav_btn button.getstarted {
+    background-color: transparent;
+
+}
+
+.nav_btn button.getstarted:hover,
+.nav_btn button.getstarted:focus {
+    border: 1px solid #19A7CE;
+}
+
+.nav_btn button.login {
+    background-color: #19A7CE;
+    color: #fff;
+}
+
+.nav_btn button.login:hover {
+    background-color: #3a899f;
+}
+
+.job_details {
+    padding: 100px 240px;
+    display: flex;
+    justify-content: center;
+    
+}
+.job_detail p{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 35px;
+}
+.job_detail p::after {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    transform: rotate(220deg);
+    transition: 0.35s ease-in-out;
+    vertical-align: middle;
+    width: 10px;
+    cursor: pointer;
+}
+
+.job_detail h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #444444;
+    padding-top: 14px;
+}
+.job_detail{
+    position: absolute;
+    top: 80px;
+    left: 260px; 
+}
+.job_content {
+    width: 1013px;
+    height: 900px;
+    background: #FFFFFF;
+    box-shadow: -5px 5px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.job_title {
+    height: 8px;
+    background: rgba(25, 167, 206, 0.25);
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 41px;
+}
+
+.job_title .job_post h1 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #444444;
+}
+
+.job_title .job_post p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #222222;
+}
+
+.job_text {
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.job_logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.job_logo h1 {
+    font-weight: 400;
+    font-size: 17px;
+    color: #444444;
+    padding-top: 4px;
+}
+
+.job_exprence p {
+    margin-top: -8px;
+    padding-left: 21px;
+}
+
+.job_description {
+    margin-top: -30px;
+    padding: 0 40px;
+}
+
+.job_decription_logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.job_decription_logo h2 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 5px;
+}
+
+.job_description p {
+    margin-top: -10px;
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555555;
+}
+
+.Required_Skill {
+    padding: 0 40px;
+}
+
+.Required_Skill .Required_Skills_logo {
+    display: flex;
+    align-items: center !important;
+    gap: 5px;
+}
+
+.Required_Skill .Required_Skills_logo h1 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 8px;
+}
+
+.Required_Skill .para {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Required_Skill .para p {
+    background: rgba(25, 167, 206, 0.15);
+    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+.Responsibility {
+    padding: 0 40px;
+}
+
+.Responsibility .Responsibilities {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Responsibility .Responsibilities h1 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 2px;
+}
+
+.Responsibility ul {
+    margin-top: -5px;
+}
+
+.Eligible_Candidate {
+    padding: 0 40px;
+}
+
+.Eligible_Candidate .Candidate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Eligible_Candidate .Candidate h2 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+    padding-top: 8px;
+}
+
+.list_candidate {
+    padding: 0 20px;
+}
+
+.list_candidate span,
+.list_candidate li {
+    font-weight: 300;
+    font-size: 16px;
+    color: #555555;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #19A7CE;
+    width: 100%;
+    height: 284px;
+    margin-top: 120px;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 135px;
+}
+
+
+.footer_about li,
+.footer_term li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_useful {
+    margin-top: 30px;
+}
+
+.footer_useful li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_Contact {
+    margin-top: 100px;
+}
+
+.footer_Contact li {
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 7px;
+
+}
+
+.footer_Contact b {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer_Contact li a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.apply_btn{
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 931px;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 10px;
+}
+.apply_btn button{
+    padding: 11px 20px;
+    color: #fff;
+    width: 135px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background: #19A7CE;
+    border-radius: 8px; 
+    cursor: pointer;
+}
+.apply_btn button:hover{
+    background: #106880;
+
+}
+.share{
+    padding: 0 70px;
+
+}
+.share img{
+    float: right;
+padding-top: 20px;
+cursor: pointer;
+}

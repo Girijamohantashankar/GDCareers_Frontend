@@ -1,0 +1,398 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+}
+
+.nav_bg {
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.04);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 0 135px;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    width: 20%;
+    height: 20%;
+}
+
+.navbar .logo h2 {
+    font-family: 'Noto Sans', sans-serif;
+    color: #19A7CE;
+    font-size: 20px;
+}
+
+.navbar .logo h2 b {
+    font-size: 30px;
+    color: #7149C6;
+}
+
+.navbar .logo h2 span {
+    color: #E74646;
+    font-size: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.feature ul {
+    display: flex;
+    gap: 20px;
+}
+
+.feature ul li {
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.feature ul .home {
+    font-weight: 700;
+    font-size: 14px;
+    color: #444444;
+}
+
+.feature ul li:hover {
+    color: #19A7CE;
+
+}
+
+.nav_btn {
+    right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_btn button {
+    width: 80px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav_btn button.getstarted {
+    background-color: transparent;
+
+}
+
+.nav_btn button.getstarted:hover,
+.nav_btn button.getstarted:focus {
+    border: 1px solid #19A7CE;
+}
+
+.nav_btn button.login {
+    background-color: #19A7CE;
+    color: #fff;
+}
+
+.nav_btn button.login:hover {
+    background-color: #3a899f;
+}
+
+.home_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+
+}
+
+.home_text h1 {
+    margin-top: 120px;
+    font-weight: 600;
+    font-size: 48px;
+    color: #444444;
+    width: 785px;
+}
+
+.home_text svg.right {
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 80px;
+}
+
+.home_text p {
+    font-weight: 500;
+    font-size: 28px;
+    color: #666666;
+    margin-top: -20px;
+    z-index: 99;
+}
+
+.home_text svg.left {
+    position: absolute;
+    margin-left: -950px;
+    margin-top: 250px;
+}
+
+.home_text button {
+    padding: 11px 60px;
+    background: #19A7CE;
+    border-radius: 8px;
+    width: 300px;
+    height: 44px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.home_text button:hover {
+    background-color: #14728b;
+}
+
+
+.requirement_job h1 {
+    padding-top: 110px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    color: #444444;
+}
+
+.dropdown_job {
+    position: relative;
+}
+
+.dropdown_job span {
+    position: absolute;
+    width: 84px;
+    margin-left: 1000px;
+    border-radius: 50%;
+    height: 84px;
+    background: #E4FFFF;
+    box-shadow: -7px 8px 8px rgba(0, 0, 0, 0.08), inset 9px -9px 10px rgba(25, 167, 206, 0.1);
+}
+
+.dropdown_job {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.dropdwon_select {
+    background-color: #fff;
+    width: 220px;
+    height: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 18px -7px rgba(0, 0, 0, 0.1);
+    color: #444444;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.dropdwon_select:hover,
+.dropdwon_select:focus {
+    border: 1px solid #19A7CE;
+}
+
+.dropdwon_select p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dropdwon_select i {
+    font-size: 30px;
+    color: #444444;
+    padding: 3px 7px;
+}
+
+.select_content {
+    background-color: #fff;
+    cursor: pointer;
+    width: 220px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    color: #444444;
+    border-radius: 8px;
+    z-index: 99;
+}
+
+.select_content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.select_content ul li {
+    list-style: none;
+    padding: 10px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.select_content ul li:hover {
+    background-color: #ECECEC;
+    border-radius: 8px;
+}
+
+.select_active {
+    background-color: #ECECEC;
+    border-radius: 8px;
+
+}
+
+
+.job_row {
+    align-items: start;
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(auto-fill, minmax(352px, 1fr));
+    padding: 0 135px;
+    margin-top: 70px;
+}
+
+.col-4 {
+    display: inline-block;
+    width: 100%;
+}
+
+.col-4 .card {
+    width: 377px;
+    height: 110px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #999999;
+    padding: 20px 20px;
+}
+
+.col-4 .card:hover,
+.col-4 .card:focus {
+    border: 1px solid #19A7CE;
+}
+
+.card_title .card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_text i {
+    transform: rotate(270deg);
+}
+
+.card_title h1 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #444444;
+}
+
+.card_title p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.card_title p span {
+    color: #444444;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.card_title h3 {
+    margin-top: -1px;
+    font-weight: 500;
+    font-size: 17px;
+    color: #888888;
+}
+
+
+
+.footer {
+    background-color: #19A7CE;
+    width: 100%;
+    height: 284px;
+    margin-top: 120px;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 135px;
+}
+
+
+.footer_about li,
+.footer_term li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_useful {
+    margin-top: 30px;
+}
+
+.footer_useful li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_Contact {
+    margin-top: 100px;
+}
+
+.footer_Contact li {
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 7px;
+
+}
+
+.footer_Contact b {
+    color: #fff;
+    font-weight: 500;
+font-size: 16px;
+}
+
+.footer_Contact li a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
