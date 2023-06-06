@@ -11,28 +11,34 @@
          <img src="assets/Images/left_login.png" alt="">
       </div>
       <div class="login_right">
-         <h1>Login here!</h1>
-         <p class="para">Don’t have an account? <a routerLink="/signup">Register</a> here!</p>
-         <form action="">
-            <div class="form__group">
-               <label for="email">Email</label>
-               <input class="form__control" type="email" placeholder="Enter your email">
-            </div>
-            <div class="form__group">
-               <label for="password">Password</label>
-               <input class="form__control" type="password" placeholder="Enter your password">
-            </div>
-            <div class="forgot">
-               <div class="check_box">
-                  <input type="checkbox">
-                  <label for="checkbox">Remember me</label>
+         <div class="login_page">
+            <h1>Login here!</h1>
+            <p class="para">Don’t have an account? <a routerLink="/signup">Register</a> here!</p>
+            <form action="" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+               <div class="form__group">
+                  <label for="email">Email</label>
+                  <input class="form__control" type="email" placeholder="Enter your email" formControlName="email">
                </div>
-               <p><a>Forgot Password?</a></p>
-            </div>
-            <div class="login_btn" routerLink="/home">
-               <h2>Login</h2>
-            </div>
-         </form>
+               <div class="form__group">
+                  <label for="password">Password</label>
+                  <input class="form__control" type="password" placeholder="Enter your password"
+                     formControlName="password" #passwordInput>
+                  <span class="password-toggle" (click)="togglePasswordVisibility(passwordInput)">
+                     <i class="fa {{ showPasswordIcon }}"></i>
+                  </span>
+               </div>
+               <div class="forgot">
+                  <div class="check_box">
+                     <input type="checkbox">
+                     <label for="checkbox">Remember me</label>
+                  </div>
+                  <p><a>Forgot Password?</a></p>
+               </div>
+               <button type="submit" class="login_btn" [disabled]="this.loginForm.invalid">
+                  <h2>Login</h2>
+               </button>
+            </form>
+         </div>
       </div>
    </div>
 </div>

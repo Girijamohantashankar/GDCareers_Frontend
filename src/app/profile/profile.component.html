@@ -37,167 +37,187 @@
         </div>
     </div>
 
-    <div class="job_details">
-        <div class="job_detail">
-            <p routerLink="/home"></p>
-            <h2>Job Detail</h2>
+    <div class="profile_main">
+        <div class="back_icon">
+            <p class="back_home" routerLink="/home"></p>
+        <h2>My Profile</h2>
         </div>
-        <div class="job_content">
-            <div class="job_title">
-                <div class="job_post">
-                    <h1>Full Stack Developer</h1>
-                    <p>Cognizant</p>
-                </div>
-                <img src="assets/Images/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.png" alt="">
-            </div>
-            <div class="job_text">
-                <div class="job_exprence">
-                    <div class="job_logo">
-                        <img src="assets/Images/bag.svg" alt="">
-                        <h1>Experience</h1>
-                    </div>
-                    <p>0-2 yrs</p>
-                </div>
-                <div class="job_exprence">
-                    <div class="job_logo">
-                        <img src="assets/Images/2.svg" alt="">
-                        <h1>Experience</h1>
-                    </div>
-                    <p>0-2 yrs</p>
-                </div>
-                <div class="job_exprence">
-                    <div class="job_logo">
-                        <img src="assets/Images/3.svg" alt="">
-                        <h1>Experience</h1>
-                    </div>
-                    <p>0-2 yrs</p>
-                </div>
-                <div class="job_exprence">
-                    <div class="job_logo">
-                        <img src="assets/Images/6.svg" alt="">
-                        <h1>Experience</h1>
-                    </div>
-                    <p>0-2 yrs</p>
-                </div>
-            </div>
-
-
-
-            <div class="job_description">
-                <div class="job_decription_logo">
-                    <img src="assets/Images/7.svg" alt="">
-                    <h2>Job Description:</h2>
-                </div>
-                <p>We are seeking a talented and experienced Full Stack Developer to join our dynamic team. As a Full
-                    Stack Developer, you will be responsible for developing and maintaining web applications across the
-                    entire software stack. You will collaborate with cross-functional teams, including designers,
-                    product managers, and other developers, to deliver high-quality solutions that meet business
-                    requirements.</p>
-            </div>
-
-
-
-            <div class="Required_Skill">
-                <div class="Required_Skills_logo">
-                    <img src="assets/Images/9.svg" alt="">
-                    <h1>Required Skills</h1>
-                </div>
-                <div class="para">
-                    <p>MEAN/MERN Stack</p>
-                    <p>Good Communication</p>
-                    <p>MongoDB</p>
-                    <p>MySQL</p>
-                </div>
-            </div>
-
-            <div class="Responsibility">
-                <div class="Responsibilities">
-                    <img src="assets/Images/8svg.svg" alt="">
-                    <h1>Responsibilities:</h1>
-                </div>
-                <ul>
-                    <li>Develop and implement web applications using modern technologies and frameworks.
-                    </li>
-                    <li>Design and architect scalable, secure, and maintainable software solutions.</li>
-                    <li> Collaborate with the development team.</li>
-                </ul>
-            </div>
-
-            <div class="Eligible_Candidate">
-                <div class="Candidate">
-                    <img src="assets/Images/20.svg" alt="">
-                    <h2>Eligible Candidates:</h2>
-                </div>
-                <div class="list_candidate">
-                    <span>Only those candidates can apply who:</span>
-
-                    <li>
-                        are available for full time (in-office) internship.
-                    </li>
-                    <li>
-                        can start the internship between 1st Jun'23 and 6th Jul'23.
-                    </li>
-                    <li>
-                        are available for duration of 6 months.
-                    </li>
-                    <li>
-                        have relevant skills and interests.
-
-                    </li>
-                </div>
-            </div>
-
-
-            <div class="apply_btn">
-                <button>Apply Now</button>
-            </div>
-            <div class="share">
-                <img src="assets/Images/4.svg" alt="">
-            </div>
-            <div class="share1">
-                <img src="assets/Images/bookmark.svg" alt="">
-            </div>
-            <div class="share2">
-                <a (click)="checkCompatibility()"><u>Your Possibility</u></a>
-            </div>
-
-        </div>
-
-        <div class="Compatibility" *ngIf="CompatibilityModal">
-            <div class="Compatibility_content">
-                <h1>Compatibility check</h1>
-                <p>Enter your skills and check whether you are compatible for this job role.</p>
-                <form class="input_search">
-                    <input [(ngModel)]="item" type="text" placeholder="Search for a skill..." class="task_input_skill" 
-                      #task>
-                    <button class="add_task" (click)="addtask(task.value)">add task</button>
-                    <ul class="add_input_task">
-                        <li *ngFor="let item of list">{{item.name}}<img src="assets/Images/cross.svg"
-                                (click)="removetask(item.id)"></li>
-                    </ul>
-                    <div class="skill_btn">
-                        <button class="check" (click)="Congratulations()">Check</button>
-                        <button class="skill_Cancel" (click)="modalclose()">Cancel</button>
-                    </div>
-                </form>
+        <div class="profile_image">
+            <img src="assets/Images/149071.png" alt="">
+            <div class="profile_text">
+                <h3>Girija Shankar Mohanta</h3>
+                <p>girija@gmail.com</p>
             </div>
         </div>
 
-        <div class="Congratulations_modal" *ngIf="Congratulations_popup">
-            <div class="Congratulations_content">
-                <img class="Close_icon" src="assets/Images/Crosssvg.svg" alt="" (click)="Congratulations_modal()">
-                <img src="assets/Images/undraw_agreement_re_d4dv 1.svg" alt="">
-                <h3>Congratulations!</h3>
-                <p>You are <span>80%</span> compatible for this job role.</p>
+        <div class="all-read-important">
+            <div class="all" [class.color]="id ==='all'" (click)="tabChange('all')">
+                <p>Bookmarks</p>
             </div>
+            <div class="unread" [class.color]="id ==='unread'" (click)="tabChange('unread')">
+                <p>Change Password</p>
+            </div>
+        </div>
+        <div class="job_row" *ngIf="bookmarkscard">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card_title">
+                        <div class="card_bg">
+                            <div class="card_text">
+                                <div class="card_company">
+                                    <h1>UI/UX Designer</h1>
+                                    <h3>Cognizant</h3>
+                                </div>
+                                <img src="assets/Images/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="job_details">
+                            <div class="job_details_text">
+                                <img src="assets/Images/1.svg" alt="">
+                                <p>0-2 yrs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/2.svg" alt="">
+                                <p>4.20-5.02 Lakhs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/3.svg" alt="">
+                                <p>Mohali, Punjab</p>
+                            </div>
+                        </div>
+                        <h4>We are seeking a talented and experienced Full Stack Developer to join our dynamic team.
+                            As a Full...</h4>
+                        <h5></h5>
+                        <div class="share">
+                            <img class="save_logo" src="assets/Images/bookmark.svg" alt="">
+                            <img class="shar_logo" src="assets/Images/4.svg" alt="">
+                            <h3 routerLink="/job-details"><u>see more</u></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card_title">
+                        <div class="card_bg">
+                            <div class="card_text">
+                                <div class="card_company">
+                                    <h1>UI/UX Designer</h1>
+                                    <h3>Cognizant</h3>
+                                </div>
+                                <img src="assets/Images/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="job_details">
+                            <div class="job_details_text">
+                                <img src="assets/Images/1.svg" alt="">
+                                <p>0-2 yrs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/2.svg" alt="">
+                                <p>4.20-5.02 Lakhs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/3.svg" alt="">
+                                <p>Mohali, Punjab</p>
+                            </div>
+                        </div>
+                        <h4>We are seeking a talented and experienced Full Stack Developer to join our dynamic team.
+                            As a Full...</h4>
+                        <h5></h5>
+                        <div class="share">
+                            <img class="save_logo" src="assets/Images/bookmark.svg" alt="">
+                            <img class="shar_logo" src="assets/Images/4.svg" alt="">
+                            <h3 routerLink="/job-details"><u>see more</u></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card_title">
+                        <div class="card_bg">
+                            <div class="card_text">
+                                <div class="card_company">
+                                    <h1>UI/UX Designer</h1>
+                                    <h3>Cognizant</h3>
+                                </div>
+                                <img src="assets/Images/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="job_details">
+                            <div class="job_details_text">
+                                <img src="assets/Images/1.svg" alt="">
+                                <p>0-2 yrs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/2.svg" alt="">
+                                <p>4.20-5.02 Lakhs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/3.svg" alt="">
+                                <p>Mohali, Punjab</p>
+                            </div>
+                        </div>
+                        <h4>We are seeking a talented and experienced Full Stack Developer to join our dynamic team.
+                            As a Full...</h4>
+                        <h5></h5>
+                        <div class="share">
+                            <img class="save_logo" src="assets/Images/bookmark.svg" alt="">
+                            <img class="shar_logo" src="assets/Images/4.svg" alt="">
+                            <h3 routerLink="/job-details"><u>see more</u></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
+
+        <div class="Change_Password" *ngIf="!bookmarkscard">
+            <form action="" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+                <div class="form__group">
+                    <label for="password">Old Password</label>
+                    <input class="form__control1" type="password" placeholder="Enter your password"
+                        formControlName="password" #passwordInput>
+                    <span class="password-toggle" (click)="togglePasswordVisibility(passwordInput)">
+                        <i class="fa {{ showPasswordIcon }}"></i>
+                    </span>
+                </div>
+                <div class="form__group">
+                    <label for="password">New Password</label>
+                    <input class="form__control2" type="password" placeholder="Enter your password"
+                        formControlName="password" #passwordInput1>
+                    <span class="password-toggle" (click)="togglePasswordVisibility1(passwordInput1)">
+                        <i class="fa {{ showPasswordIcon1 }}"></i>
+                    </span>
+                </div>
+                <div class="form__group">
+                    <label for="password">Confirm Password</label>
+                    <input class="form__control3" type="password" placeholder="Enter your password"
+                        formControlName="password" #passwordInput2>
+                    <span class="password-toggle" (click)="togglePasswordVisibility2(passwordInput2)">
+                        <i class="fa {{ showPasswordIcon2 }}"></i>
+                    </span>
+                </div>
+
+                <div class="pass_btn">
+                    <button type="submit" class="update_btn" [disabled]="this.loginForm.invalid">Update</button>
+                <button type="Cancel" class="Cancel_btn">Cancel</button>
+                </div>
+            </form>
+        </div>
 
 
 
 
     </div>
+
+
 
 
 

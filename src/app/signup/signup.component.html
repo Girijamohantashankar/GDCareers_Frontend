@@ -11,31 +11,36 @@
             <img src="assets/Images/left_login.png" alt="">
         </div>
         <div class="login_right">
-            <h1>Signup here!</h1>
-            <p class="para">Already have an account? <a routerLink="/login">Login</a> here!</p>
-            <form action="">
-                <div class="form__group">
-                    <label for="email">Name</label>
-                    <input class="form__control" type="name" placeholder="Enter your name">
-                </div>
-                <div class="form__group">
-                    <label for="email">Email</label>
-                    <input class="form__control" type="email" placeholder="Enter your email">
-                </div>
-                <div class="form__group">
-                    <label for="password">Password</label>
-                    <input class="form__control" type="password" placeholder="Enter your password">
-                </div>
-                <div class="forgot">
-                    <div class="check_box">
-                        <input type="checkbox">
-                        <p>I agree to <a><u>terms and conditions</u></a></p>
+            <div class="signup_page">
+                <h1>Signup here!</h1>
+                <p class="para">Already have an account? <a routerLink="/login">Login</a> here!</p>
+                <form action="" [formGroup]="signupForm" (ngSubmit)="onSignup(signupForm.value)">
+                    <div class="form__group">
+                        <label for="name">Name</label>
+                        <input class="form__control" type="name" placeholder="Enter your name" formControlName="name">
                     </div>
-                </div>
-                <div class="login_btn">
-                    <h2>Sign Up</h2>
-                </div>
-            </form>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input class="form__control" type="email" placeholder="Enter your email" formControlName="email">
+                    </div>
+                    <div class="form__group">
+                        <label for="password">Password</label>
+                        <input class="form__control" type="password" placeholder="Enter your password" formControlName="password" #passwordInput>
+                        <span class="password-toggle" (click)="togglePasswordVisibility(passwordInput)">
+                            <i class="fa {{ showPasswordIcon }}"></i>
+                        </span>
+                    </div>
+                    <div class="forgot">
+                        <div class="check_box">
+                            <input type="checkbox">
+                            <p>I agree to <a><u>terms and conditions</u></a></p>
+                        </div>
+                    </div>
+                    <button type="submit" class="login_btn" [disabled]="this.signupForm.invalid">
+                        <h2>Sign Up</h2>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

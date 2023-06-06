@@ -1,0 +1,499 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* position: relative; */
+    /* min-height: 100vh; */
+}
+
+.nav_bg {
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.04);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 0 135px;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    width: 20%;
+    height: 20%;
+}
+
+.navbar .logo h2 {
+    font-family: 'Noto Sans', sans-serif;
+    color: #19A7CE;
+    font-size: 20px;
+}
+
+.navbar .logo h2 b {
+    font-size: 30px;
+    color: #7149C6;
+}
+
+.navbar .logo h2 span {
+    color: #E74646;
+    font-size: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.feature ul {
+    display: flex;
+    gap: 20px;
+}
+
+.feature ul li {
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.feature ul .home {
+    font-weight: 700;
+    font-size: 17px;
+    color: #444444;
+}
+
+.feature ul li:hover {
+    color: #19A7CE;
+
+}
+
+.profile_logo {
+    display: flex;
+    gap: 31px;
+}
+
+.profile_logo img {
+    cursor: pointer;
+}
+
+/* -------------Profile Settings--------------------- */
+.profile {
+    position: relative;
+}
+
+.account_settings {
+    padding: 0 15px;
+    background: #FFFFFF;
+    box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    position: absolute;
+    z-index: 999;
+}
+
+.account_text {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    /* text-align: justify; */
+    /* text-align: center; */
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.account_text img {
+    max-width: 18px;
+    max-height: 18px;
+}
+
+.account_name h3 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #555555;
+    padding-top: 20px;
+}
+
+.account_name p {
+    font-weight: 300;
+    font-size: 13px;
+    color: #777777;
+    margin-top: -5px;
+}
+
+.account_card h2 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 13px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav_btn {
+    right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_btn button {
+    width: 80px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav_btn button.getstarted {
+    background-color: transparent;
+
+}
+
+.nav_btn button.getstarted:hover,
+.nav_btn button.getstarted:focus {
+    border: 1px solid #19A7CE;
+}
+
+.nav_btn button.login {
+    background-color: #19A7CE;
+    color: #fff;
+}
+
+.nav_btn button.login:hover {
+    background-color: #3a899f;
+}
+
+.admin_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 35vh; */
+    /* margin-top: 150px; */
+
+}
+
+.admin_page h1 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 150px;
+}
+
+.admin_row {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.admin_row .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 265px;
+    height: 184px;
+    background: rgba(25, 167, 206, 0.05);
+    box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.admin_row .card:hover,
+.admin_row .card:focus {
+    border: 1px solid #19A7CE;
+}
+
+.admin_row .card h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #444444;
+}
+
+form {
+    padding-bottom: 40px;
+}
+
+.Add_Job_Details {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.Add_Job_Details_card {
+    background: #FFFFFF;
+    box-shadow: -5px 5px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.form__group {
+    margin-bottom: 10px;
+    display: grid;
+
+}
+
+
+.form__input {
+    width: 400px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 15px;
+
+}
+
+.form__input:hover,
+.form__input:focus {
+    border: 1px solid #19A7CE;
+}
+
+.form__input::placeholder {
+    color: #B4B4B4;
+    font-weight: 300;
+    font-size: 14px;
+    padding-left: 5px;
+
+}
+
+.form__group label {
+    font-weight: 400;
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    gap: 20px;
+}
+
+
+.form__group input[type="file"]::-webkit-file-upload-button {
+    background: rgba(25, 167, 206, 0.6);
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-top: 8px;
+    padding: 4px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+
+.form__group input[type="file"]::-webkit-file-upload-button:hover {
+    background: #fff;
+    border: 1px solid #19A7CE;
+    color: #B4B4B4;
+}
+
+.form__group textarea {
+    resize: none;
+    width: 400px;
+    height: 60px;
+
+}
+
+.form__group textarea::placeholder {
+    padding-top: 10px;
+}
+
+.form_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.form_btn button {
+    width: 135px;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    /* margin-top: 40px; */
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form_btn button.add {
+    background: #19A7CE;
+    color: #FFFFFF;
+}
+
+.form_btn button.Cancel {
+    background: #FFFFFF;
+    color: #19A7CE;
+}
+
+.form_btn button.Cancel:hover {
+    border: 1px solid #19A7CE;
+}
+
+.task_input {
+    width: 400px;
+    height: 60px;
+}
+
+.form__group .add_task {
+    display: none;
+}
+
+.form__group .add_input_task {
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 32px;
+    gap: 10px;
+    margin-left: -40px;
+    width: 400px;
+
+}
+
+.add_input_task li {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    background: rgba(25, 167, 206, 0.15);
+    border-radius: 20px;
+    padding: 6px 16px;
+    list-style: none;
+    cursor: pointer;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #19A7CE;
+    width: 100%;
+    height: 284px;
+    margin-top: 120px;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 135px;
+}
+
+
+.footer_about li,
+.footer_term li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_useful {
+    margin-top: 30px;
+}
+
+.footer_useful li {
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.footer_Contact {
+    margin-top: 100px;
+}
+
+.footer_Contact li {
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 7px;
+
+}
+
+.footer_Contact b {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer_Contact li a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}

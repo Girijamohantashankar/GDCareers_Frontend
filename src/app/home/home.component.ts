@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  accountsettings:boolean=false;
+  usersetting(){
+   this.accountsettings=!this.accountsettings
+  }
+
+
 
 }

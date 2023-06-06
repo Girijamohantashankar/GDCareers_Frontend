@@ -78,10 +78,74 @@
 
 }
 
-.profile {
+.profile_logo {
     display: flex;
     gap: 31px;
 }
+
+.profile_logo img {
+    cursor: pointer;
+}
+
+/* -------------Profile Settings--------------------- */
+.profile {
+    position: relative;
+}
+
+.account_settings {
+    padding: 0 15px;
+    background: #FFFFFF;
+    box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    position: absolute;
+    z-index: 999;
+}
+
+.account_text {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    /* text-align: justify; */
+    /* text-align: center; */
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.account_text img {
+    max-width: 18px;
+    max-height: 18px;
+}
+
+.account_name h3 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #555555;
+    padding-top: 20px;
+}
+
+.account_name p {
+    font-weight: 300;
+    font-size: 13px;
+    color: #777777;
+    margin-top: -5px;
+}
+
+.account_card h2 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 13px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 .search {
     display: flex;
@@ -133,6 +197,7 @@
 .col-4 {
     display: inline-block;
     width: 100%;
+    cursor: pointer;
 }
 
 .col-4 .card {
@@ -233,7 +298,8 @@
     align-items: center;
     margin-top: -15px;
 }
-.share img{
+
+.share img {
     cursor: pointer;
 }
 
@@ -256,7 +322,8 @@
     background: rgba(197, 233, 243, 0.4);
     border-radius: 8px;
     margin: 10px 20px;
-    padding-left: 10px;}
+    padding-left: 10px;
+}
 
 .filters::after {
     content: '';
@@ -268,10 +335,12 @@
     box-shadow: -7px 8px 8px rgba(0, 0, 0, 0.08), inset 9px -9px 10px rgba(25, 167, 206, 0.1);
     left: 50%;
 }
+
 .filters_title {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-left: 20px;
 }
 
 .filters_title h2 {
@@ -308,7 +377,8 @@
 }
 
 .faq-drawer__content .job_input_text input[type="checkbox"],
-.faq-drawer__content .job_input_text label,.faq-drawer__content .job_input_text input[type="radio"]{
+.faq-drawer__content .job_input_text label,
+.faq-drawer__content .job_input_text input[type="radio"] {
     cursor: pointer;
 }
 
@@ -335,11 +405,12 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-left: 20px;
 }
 
 .faq-drawer__title span {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 15px;
     color: #444444;
 }
 
@@ -363,16 +434,18 @@
 }
 
 .drawer__title1::after {
-    left: 105px;
+    left: 100px;
 }
 
 .drawer__title2::after {
-    left: 10px;
+    left: 20px;
 }
 
-.drawer__title3::after,.drawer__title4::after{
-margin-left: -65px;
+.drawer__title3::after,
+.drawer__title4::after {
+    margin-left: -55px;
 }
+
 .faq-drawer__title:hover {
     color: #4E4B52;
 }
@@ -389,6 +462,7 @@ margin-left: -65px;
     height: 160px;
     overflow-y: auto;
     margin-top: 5px;
+    margin-left: 20px;
 
 }
 
@@ -422,7 +496,7 @@ input.faq-drawer__trigger[type="checkbox"] {
 }
 
 .drop_down_fillter {
-    padding-right: 60px;
+    padding-right: 40px;
 }
 
 
@@ -491,4 +565,7 @@ input.faq-drawer__trigger[type="checkbox"] {
     padding-top: 10px;
     color: #fff;
     cursor: pointer;
+}
+.account_card h2:hover{
+    color: #19A7CE;
 }

@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     margin: 0 135px;
+    /* padding: 0 50px; */
     justify-content: space-between;
 }
 
@@ -139,74 +140,35 @@
     cursor: pointer;
 }
 
-.account_card h2:hover{
+.account_card h2:hover {
     color: #19A7CE;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.nav_btn {
-    right: 80px;
+/* .profile_main {
     display: flex;
-    gap: 20px;
-}
-
-.nav_btn button {
-    width: 80px;
-    height: 36px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.nav_btn button.getstarted {
-    background-color: transparent;
+    align-items: center;
+} */
+.profile_main {
+    padding: 0 240px;
 
 }
 
-.nav_btn button.getstarted:hover,
-.nav_btn button.getstarted:focus {
-    border: 1px solid #19A7CE;
+.profile_main h2 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #444444;
+    /* padding-top: 55px; */
+    /* padding-left: 110px; */
 }
-
-.nav_btn button.login {
-    background-color: #19A7CE;
-    color: #fff;
-}
-
-.nav_btn button.login:hover {
-    background-color: #3a899f;
-}
-
-.job_details {
-    padding: 100px 240px;
+.back_icon{
     display: flex;
-    justify-content: center;
-
+    padding-top: 45px;
+    align-items: center;
+    gap: 10px;
 }
 
-.job_detail p {
-    position: absolute;
-    margin-left: -20px;
-    margin-top: 35px;
-}
-
-.job_detail p::after {
+.profile_main .back_home::before {
     border-style: solid;
     border-width: 2px 2px 0 0;
     content: " ";
@@ -217,188 +179,310 @@
     vertical-align: middle;
     width: 10px;
     cursor: pointer;
+    /* margin-top: -3px; */
+    /* margin-right: 10px; */
 }
 
-.job_detail h2 {
+.profile_image {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 8px;
+    padding: 30px 40px;
+}
+
+.profile_image img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.profile_image .profile_text h3 {
     font-weight: 400;
     font-size: 24px;
-    color: #444444;
-    padding-top: 14px;
+    color: #666666;
+    padding-top: 1px;
 }
 
-.job_detail {
-    position: absolute;
-    top: 80px;
-    left: 260px;
+.profile_image .profile_text p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #999999;
+    margin-top: -20px;
 }
 
-.job_content {
-    width: 1013px;
-    height: 900px;
+.all-read-important {
+    display: flex;
+    /* width: 232px; */
+    height: 28px;
+    align-items: center;
+    margin-top: 20px;
+    /* padding-left: 13px; */
+    column-gap: 40px;
+    border-bottom: 1px solid #E0E0E0;
+    color: #969696;
+    padding-bottom: 19px;
+}
+
+.all-read-important p {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.all,
+.unread {
+    border-bottom: 2px solid transparent;
+}
+
+.all:hover,
+.unread:hover {
+    border-bottom: 2px solid #19A7CE;
+}
+
+.color {
+    color: #19A7CE;
+    border-bottom: 2px solid #19A7CE;
+}
+
+.job_row {
+    align-items: start;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(auto-fill, minmax(412px, 1fr));
+    margin-top: 50px;
+    padding: 51px 30px;
     background: #FFFFFF;
-    box-shadow: -5px 5px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E1E1E1;
     border-radius: 8px;
 }
 
-.job_title {
-    height: 8px;
-    background: rgba(25, 167, 206, 0.25);
-    border-radius: 8px 8px 0px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 41px;
+.col-4 {
+    display: inline-block;
+    width: 100%;
 }
 
-.job_title .job_post h1 {
-    font-weight: 500;
+.col-4 .card {
+    width: 431px;
+    height: 216px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #999999;
+    /* padding: 5px 20px; */
+}
+
+.col-4 .card:hover,
+.col-4 .card:focus {
+    border: 1px solid #19A7CE;
+}
+
+.card_bg {
+    height: 68px;
+    background: rgba(25, 167, 206, 0.15);
+    width: 100%;
+    /* padding: 5px 20px; */
+}
+
+.card_title .card_text {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+
+
+.card_text img {
+    width: 100px;
+    height: 38px;
+}
+
+.card_company h1 {
+    font-weight: 400;
     font-size: 20px;
     color: #444444;
 }
 
-.job_title .job_post p {
+.card_company h3 {
     font-weight: 300;
     font-size: 18px;
     color: #222222;
+    margin-top: -15px;
 }
 
-.job_text {
-    padding: 40px 40px;
+.job_details {
     display: flex;
     align-items: center;
-    gap: 80px;
-}
-
-.job_logo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.job_logo h1 {
-    font-weight: 400;
-    font-size: 17px;
-    color: #444444;
-    padding-top: 4px;
-}
-
-.job_exprence p {
-    margin-top: -8px;
-    padding-left: 21px;
-}
-
-.job_description {
-    margin-top: -30px;
-    padding: 0 40px;
-}
-
-.job_decription_logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.job_decription_logo h2 {
-    font-weight: 400;
-    font-size: 16px;
-    color: #444444;
-    padding-top: 5px;
-}
-
-.job_description p {
-    margin-top: -10px;
     padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+    margin-top: -20px;
+}
+
+.job_details_text {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.job_details_text p {
+    color: #444444;
     font-weight: 300;
     font-size: 16px;
-    color: #555555;
 }
 
-.Required_Skill {
-    padding: 0 40px;
-}
-
-.Required_Skill .Required_Skills_logo {
-    display: flex;
-    align-items: center !important;
-    gap: 5px;
-}
-
-.Required_Skill .Required_Skills_logo h1 {
-    font-weight: 400;
+.card_title h4 {
+    font-weight: 300;
     font-size: 16px;
     color: #444444;
-    padding-top: 8px;
-}
-
-.Required_Skill .para {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.Required_Skill .para p {
-    background: rgba(25, 167, 206, 0.15);
-    border-radius: 20px;
-    padding: 6px 16px;
-}
-
-.Responsibility {
-    padding: 0 40px;
-}
-
-.Responsibility .Responsibilities {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.Responsibility .Responsibilities h1 {
-    font-weight: 400;
-    font-size: 16px;
-    color: #444444;
-    padding-top: 2px;
-}
-
-.Responsibility ul {
+    padding: 0 20px;
+    text-align: justify;
     margin-top: -5px;
+
 }
 
-.Eligible_Candidate {
-    padding: 0 40px;
+.card_title h5 {
+    border-bottom: 1px solid #B4B4B4;
+    width: 382px;
+    margin-left: 20px;
+    margin-top: -10px;
 }
 
-.Eligible_Candidate .Candidate {
+.share {
     display: flex;
+    float: right;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.share img {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -15px;
+}
+
+.share h3 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #19A7CE;
+    cursor: pointer;
+}
+
+.share img.save_logo {
+    right: 40px;
+}
+
+
+.Change_Password {
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 8px;
+    padding: 51px 20px 51px 30px;
+}
+
+.form__group label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #444444;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form__control1,
+.form__control2,
+.form__control3 {
+    width: 400px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 50px;
+
+}
+
+.form__control1:hover,
+.form__control1:focus,
+.form__control2:hover,
+.form__control2:focus,
+.form__control3:hover,
+.form__control3:focus {
+    border: 1px solid #19A7CE;
+}
+
+.form__control1 {
+    margin-left: 200px;
+}
+
+.form__control2 {
+    margin-left: 194px;
+}
+
+.form__control3 {
+    margin-left: 170px;
+}
+
+.form__group span i {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -10px;
+    font-size: 20px;
+    color: #AAAAAA;
+    cursor: pointer;
+}
+
+.pass_btn {
+    display: flex;
+    justify-content: end;
     align-items: center;
     gap: 10px;
+    margin-top: 50px;
 }
 
-.Eligible_Candidate .Candidate h2 {
-    font-weight: 400;
-    font-size: 16px;
-    color: #444444;
-    padding-top: 8px;
+.pass_btn button {
+    width: 135px;
+    height: 42px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-.list_candidate {
-    padding: 0 20px;
+.pass_btn button.update_btn {
+    background: #19A7CE;
+    color: #fff;
 }
 
-.list_candidate span,
-.list_candidate li {
-    font-weight: 300;
-    font-size: 16px;
-    color: #555555;
+.pass_btn button.update_btn:hover {
+    background: #0b6781;
 }
 
+.pass_btn button.Cancel_btn {
+    background: transparent;
+    color: #19A7CE;
+}
 
+.pass_btn button.Cancel_btn:hover {
+    border: 1px solid #19A7CE;
+}
 
-
-
-
-
-
-
+input.ng-dirty.ng-invalid {
+    border-color: red
+}
 
 
 .footer {
@@ -562,7 +646,6 @@
     list-style: none;
     cursor: pointer;
     /* gap: 10px; */
-    margin-top: -95px;
 }
 
 .Compatibility {
@@ -675,7 +758,8 @@
     justify-content: center;
     align-items: center;
 }
-.Congratulations_content .Close_icon{
+
+.Congratulations_content .Close_icon {
     position: absolute;
     margin-left: 420px;
     margin-top: -280px;

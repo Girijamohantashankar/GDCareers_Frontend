@@ -303,6 +303,7 @@
 
 .card_text i {
     transform: rotate(270deg);
+    color: #19A7CE;
 }
 
 .card_title h1 {
@@ -319,7 +320,7 @@
 }
 
 .card_title p span {
-    color: #444444;
+    color: #19A7CE;
     font-weight: 300;
     font-size: 14px;
 }

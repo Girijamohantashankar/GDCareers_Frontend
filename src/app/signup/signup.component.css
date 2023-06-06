@@ -65,23 +65,45 @@
     width: 50%;
 }
 
-.login_right h1 {
+.signup_page h1 {
     font-weight: 500;
     font-size: 30px;
     color: #555555;
 }
 
-.login_right .para {
+.signup_page .para {
     padding-top: 4px;
     font-weight: 400;
     font-size: 14px;
     color: #666666;
 }
 
-.login_right .para a {
+.signup_page .para a {
     color: #19A7CE;
     cursor: pointer;
     text-decoration: none;
+}
+
+.password-toggle i {
+    position: absolute;
+    margin-top: -38px;
+    margin-left: 380px;
+    color: #B4B4B4;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.signup_page {
+    height: 503px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    width: 480px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .form__group {
@@ -148,9 +170,12 @@
     cursor: pointer;
 }
 
+input.ng-dirty.ng-invalid {
+    border-color: red
+}
 
 .login_btn {
-    width: 400px;
+    width: 425px;
     height: 40px;
     background: #19A7CE;
     border-radius: 8px;
@@ -159,6 +184,8 @@
     align-items: center;
     cursor: pointer;
     margin-top: 20px;
+    border: none;
+    outline: none;
 }
 
 .login_btn:hover {
@@ -170,4 +197,8 @@
     font-weight: 500;
     font-size: 14px;
     color: #FFFFFF;
+}
+
+button.login_btn:disabled {
+    cursor: not-allowed;
 }

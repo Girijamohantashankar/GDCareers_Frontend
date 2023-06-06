@@ -7,35 +7,55 @@ import { CareerAdviceComponent } from './career-advice/career-advice.component';
 import { SalaryGuideComponent } from './salary-guide/salary-guide.component';
 import { HomeComponent } from './home/home.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
-   path:"", redirectTo:'/landing',pathMatch:'full'
+    path: '',
+    redirectTo: '/landing',
+    pathMatch: 'full',
   },
   {
-    path:"landing", component:LandingPageComponent
-   },
+    path: 'landing',
+    component: LandingPageComponent,
+  },
   {
-    path:"login", component:LoginComponent
-   },
-   {
-    path:"signup", component:SignupComponent
-   },
-   {
-    path:"career", component:CareerAdviceComponent
-   },
-   {
-    path:"salaryGuide", component:SalaryGuideComponent
-   },
-   {
-    path:"home", component:HomeComponent
-   },{
-    path:"job-details", component:JobDetailsComponent
-   }
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'career',
+    component: CareerAdviceComponent,
+  },
+  {
+    path: 'salaryGuide',
+    component: SalaryGuideComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'job-details',
+    component: JobDetailsComponent,
+  },
+  {
+    path: 'admin-page',
+    component: AdminPageComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

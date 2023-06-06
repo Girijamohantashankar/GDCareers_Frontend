@@ -13,8 +13,25 @@
                 </ul>
 
                 <div class="profile">
-                    <img src="assets/Images/notification.png" alt="">
-                    <img src="assets/Images/user.png" alt="">
+                    <div class="profile_logo">
+                        <img src="assets/Images/notification.png" alt="">
+                        <img (click)="usersetting()" src="assets/Images/user.png" alt="">
+                    </div>
+                    <div class="account_settings" (mouseleave)="accountsettings = false" >
+                        <div class="account_card" *ngIf="accountsettings">
+                            <div class="account_text">
+                                <img src="assets/Images/user.png" alt="">
+                                <div class="account_name">
+                                    <h3>Girija Shankar </h3>
+                                    <p>girija@gmail.com</p>
+                                </div>
+                            </div>
+                            <h2 routerLink="/profile">My Profile</h2>
+                            <h2 routerLink="/profile">Change Password</h2>
+                            <h2 routerLink="/profile">Bookmarks</h2>
+                            <h2>Sign Out</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +119,8 @@
             <div class="drop_down_fillter">
                 <div class="faq-drawer">
                     <input class="faq-drawer__trigger" id="faq-drawer-5" type="checkbox" />
-                    <label class="faq-drawer__title drawer__title3" for="faq-drawer-5"><img src="assets/Images/12.svg" alt="">
+                    <label class="faq-drawer__title drawer__title3" for="faq-drawer-5"><img src="assets/Images/12.svg"
+                            alt="">
                         <span>Experience Level</span>
                     </label>
                     <div class="faq-drawer__content-wrapper">
@@ -139,7 +157,8 @@
             <div class="drop_down_fillter">
                 <div class="faq-drawer">
                     <input class="faq-drawer__trigger" id="faq-drawer-6" type="checkbox" />
-                    <label class="faq-drawer__title drawer__title4" for="faq-drawer-6"><img src="assets/Images/13.svg" alt="">
+                    <label class="faq-drawer__title drawer__title4" for="faq-drawer-6"><img src="assets/Images/13.svg"
+                            alt="">
                         <span>Salary (per year)</span>
                     </label>
                     <div class="faq-drawer__content-wrapper">
@@ -369,7 +388,7 @@
             <h1 class="jobs_text">Jobs as per Your Preferences</h1>
 
             <div class="job_row">
-                <div class="col-4">
+                <div class="col-4" routerLink="/job-details">
                     <div class="card">
                         <div class="card_title">
                             <div class="card_bg">
@@ -400,13 +419,14 @@
                                 As a Full...</h4>
                             <h5></h5>
                             <div class="share">
+                                <img src="assets/Images/bookmark.svg" alt="">
                                 <img src="assets/Images/4.svg" alt="">
                                 <h3 routerLink="/job-details"><u>see more</u></h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4" routerLink="/job-details">
                     <div class="card">
                         <div class="card_title">
                             <div class="card_bg">
@@ -437,13 +457,14 @@
                                 As a Full...</h4>
                             <h5></h5>
                             <div class="share">
+                                <img src="assets/Images/bookmark.svg" alt="">
                                 <img src="assets/Images/4.svg" alt="">
                                 <h3 routerLink="/job-details"><u>see more</u></h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4" routerLink="/job-details">
                     <div class="card">
                         <div class="card_title">
                             <div class="card_bg">
@@ -474,13 +495,14 @@
                                 As a Full...</h4>
                             <h5></h5>
                             <div class="share">
+                                <img src="assets/Images/bookmark.svg" alt="">
                                 <img src="assets/Images/4.svg" alt="">
                                 <h3 routerLink="/job-details"><u>see more</u></h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4" routerLink="/job-details">
                     <div class="card">
                         <div class="card_title">
                             <div class="card_bg">
@@ -511,12 +533,14 @@
                                 As a Full...</h4>
                             <h5></h5>
                             <div class="share">
-                                <img src="assets/Images/4.svg" alt="" >
+                                <img src="assets/Images/bookmark.svg" alt="">
+                                <img src="assets/Images/4.svg" alt="" class="bookmark_logo">
                                 <h3 routerLink="/job-details"><u>see more</u></h3>
                             </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>

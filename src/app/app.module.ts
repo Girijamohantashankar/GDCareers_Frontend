@@ -10,6 +10,9 @@ import { CareerAdviceComponent } from './career-advice/career-advice.component';
 import { SalaryGuideComponent } from './salary-guide/salary-guide.component';
 import { HomeComponent } from './home/home.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,12 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     CareerAdviceComponent,
     SalaryGuideComponent,
     HomeComponent,
-    JobDetailsComponent
+    JobDetailsComponent,
+    AdminPageComponent,
+    ProfileComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
