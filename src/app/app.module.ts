@@ -13,6 +13,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
     JobDetailsComponent,
     AdminPageComponent,
     ProfileComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
