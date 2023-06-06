@@ -50,6 +50,7 @@
             <div class="filters_title">
                 <img src="assets/Images/filter.svg" alt="">
                 <h2>Filters</h2>
+                <div> list</div>
             </div>
             <div class="drop_down_fillter">
                 <div class="faq-drawer">
@@ -59,20 +60,20 @@
                     </label>
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check1">
+                            <div class="job_input_text" >
+                                <input type="checkbox" id="check1" [checked]="filterz[0].select" (change)="onChange(0)">
                                 <label for="check1"> Information Tehnology</label><br>
                             </div>
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check2">
+                            <div class="job_input_text" >
+                                <input type="checkbox" id="check2" [checked]="filterz[1].select">
                                 <label for="check2"> Healthcare</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check3">
+                                <input type="checkbox" id="check3" [checked]="filterz[2].select">
                                 <label for="check3"> Education & Training</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check4">
+                                <input type="checkbox" id="check4" [checked]="filterz[3].select">
                                 <label for="check4"> Finance</label><br>
                             </div>
                         </div>
@@ -540,7 +541,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
