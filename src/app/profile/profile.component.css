@@ -385,6 +385,7 @@
     border: 1px solid #E1E1E1;
     border-radius: 8px;
     padding: 51px 20px 51px 30px;
+    margin-top: 20px;
 }
 
 .form__group label {

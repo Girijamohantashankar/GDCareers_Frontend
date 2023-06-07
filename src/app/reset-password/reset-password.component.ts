@@ -14,6 +14,12 @@ export class ResetPasswordComponent {
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_-]).{8,}$/
       ),
     ]),
+    cpassword:new FormControl('', [
+      Validators.required,
+      Validators.pattern(
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_-]).{8,}$/
+      ),
+    ])
   })
   onRest(data:any){
     console.log(this.resetForm.value)

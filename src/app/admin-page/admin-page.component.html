@@ -54,6 +54,15 @@
                 <h2>View all jobs</h2>
             </div>
         </div>
+        <div class="add_job_modal" *ngIf="Job_added">
+            <div class="popup_modal">
+                <img src="assets/Images/cross.svg" alt="" class="crocc_icon" (click)="close_Modal()">
+                <img src="assets/Images/tick.svg" alt="">
+                <h2>All Done</h2>
+                <p>Job post has been added successfully.</p>
+            </div>
+        </div>
+    
     </div>
 
     <div class="Add_Job_Details" *ngIf="addjobdetails">
@@ -144,7 +153,7 @@
 
                 </div>
                 <div class="form_btn">
-                    <button class="add">Add</button>
+                    <button class="add" (click)="jobAdd()">Add</button>
                     <button class="Cancel" (click)="canclejob()">Cancel</button>
                 </div>
             </form>
@@ -218,8 +227,12 @@
                             </defs>
                         </svg>
                         Near LPU, Jalandhar</a></li>
-
             </div>
         </div>
     </footer>
+
+    
+
+
+
 </div>

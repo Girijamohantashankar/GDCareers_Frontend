@@ -29,4 +29,13 @@ export class AdminPageComponent {
     this.addjobdetails=false;
 
   }
+  Job_added:boolean=false;
+  jobAdd(){
+this.Job_added=true;
+this.addjobdetails=false;
+  }
+  close_Modal(){
+this.Job_added=false;
+
+  }
 }

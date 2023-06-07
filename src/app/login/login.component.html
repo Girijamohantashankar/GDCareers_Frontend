@@ -32,7 +32,7 @@
                      <input type="checkbox">
                      <label for="checkbox">Remember me</label>
                   </div>
-                  <p><a>Forgot Password?</a></p>
+                  <p (click)="forgetmodal()"><a>Forgot Password?</a></p>
                </div>
                <button type="submit" class="login_btn" [disabled]="this.loginForm.invalid">
                   <h2>Login</h2>
@@ -40,5 +40,37 @@
             </form>
          </div>
       </div>
+   </div>
+
+
+
+   <!-- Forget Modal -->
+
+   <div class="forget" *ngIf="forgetModal">
+      <div class="forget_modal">
+         <img src="assets/Images/forget.svg" alt="">
+         <h1>Forgot Password?</h1>
+         <form action="" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+            <div class="form__group">
+               <label for="email">Enter your email</label>
+               <input class="form__control" type="email" placeholder="Eg. sushant.290@gmail.com"
+                  formControlName="email">
+            </div>
+            <button class="done_btn">Done</button> <br>
+            <button class="back_btn" (click)="backmodal()"><img src="assets/Images/back_icon.svg" alt=""> <span>Back To Login</span></button>
+         </form>
+      </div>
+   </div>
+
+
+   <!-- Incorrect Pass/email -->
+   <div class="incorrect_modal" *ngIf="closeIncorrectModal">
+      <div class="incorrect_login">
+         <img src="assets/Images/incorrect.svg" alt="">
+         <h1>OOPS!</h1>
+         <p>Incorrect email or password!</p>
+         <button class="try_btn" (click)="closeIncorrect()">Try Again</button>
+      </div>
+
    </div>
 </div>
