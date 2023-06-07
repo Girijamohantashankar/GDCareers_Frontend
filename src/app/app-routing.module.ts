@@ -10,6 +10,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'reset',
     component: ResetPasswordComponent,
+  },
+  {
+    path: 'loader',
+    component: LoaderComponent,
   },
 ];
 
