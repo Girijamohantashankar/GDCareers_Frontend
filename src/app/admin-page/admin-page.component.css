@@ -140,6 +140,9 @@
     cursor: pointer;
 }
 
+.account_card h2:hover {
+    color: #19A7CE;
+}
 
 
 

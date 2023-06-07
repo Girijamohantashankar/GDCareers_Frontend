@@ -13,6 +13,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
     JobDetailsComponent,
     AdminPageComponent,
     ProfileComponent,
+    ResetPasswordComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
