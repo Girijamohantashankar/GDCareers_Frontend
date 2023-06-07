@@ -14,6 +14,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     AdminPageComponent,
     ProfileComponent,
     ResetPasswordComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
