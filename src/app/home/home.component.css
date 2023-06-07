@@ -339,6 +339,7 @@
 .filters_title {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     gap: 5px;
     margin-left: 20px;
 }
@@ -347,6 +348,27 @@
     font-weight: 600;
     font-size: 24px;
     color: #444444;
+}
+
+.fillter_list {
+    display: inline-block;    padding-left: 30px;
+}
+
+.fillter_list h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 5px 14px 5px 16px;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 13px;
+    color: #222222;
+}
+
+.fillter_list img {
+    cursor: pointer;
 }
 
 .Jobs_Preference {
@@ -566,6 +588,7 @@ input.faq-drawer__trigger[type="checkbox"] {
     color: #fff;
     cursor: pointer;
 }
-.account_card h2:hover{
+
+.account_card h2:hover {
     color: #19A7CE;
 }
