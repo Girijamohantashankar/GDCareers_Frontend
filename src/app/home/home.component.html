@@ -54,7 +54,7 @@
 
 
             <div class="fillter_list">
-                <span *ngFor="let i of select | filter">{{filterz[i].title}}<img src="assets/Images/cross.svg" alt=""></span>
+                <span *ngFor="let i of select | filter" >{{filterz[i].title}}<img src="assets/Images/cross.svg" alt="" (click)="remove(i)"></span>
             </div>
 
 
@@ -103,27 +103,27 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check5">
+                                <input type="checkbox" id="check5" [checked]="filterz[4].select" (change)="onChange(4)">
                                 <label for="check1"> Full Time</label><br>
                             </div>
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check6">
+                            <div class="job_input_text" >
+                                <input type="checkbox" id="check6" [checked]="filterz[5].select" (change)="onChange(5)">
                                 <label for="check2"> Part Time</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check7">
+                                <input type="checkbox" id="check7" [checked]="filterz[6].select" (change)="onChange(6)">
                                 <label for="check3"> Freelancing</label><br>
                             </div>
-                            <div class="job_input_text">
+                            <!-- <div class="job_input_text">
                                 <input type="checkbox" id="check8">
                                 <label for="check4"> Finance</label><br>
-                            </div>
+                            </div> -->
                             <div class="job_input_text">
-                                <input type="checkbox" id="check9">
+                                <input type="checkbox" id="check9" [checked]="filterz[7].select" (change)="onChange(7)">
                                 <label for="check5">Remote Work</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check10">
+                                <input type="checkbox" id="check10" [checked]="filterz[8].select" (change)="onChange(8)">
                                 <label for="check6"> Hybrid</label><br>
                             </div>
                         </div>
@@ -140,27 +140,27 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="radio" id="job" name="flavor" value="job" #exp (change)="radio()">
+                                <input type="radio" id="job" name="flavor" value="job" #exp (change)="radio(9,'exp')">
                                 <label for="job">Fresher</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job1" name="flavor" value="job1" #exp (change)="radio()">
+                                <input type="radio" id="job1" name="flavor" value="job1" #exp (change)="radio(10,'exp')">
                                 <label for="job1">0-1 yrs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job2" name="flavor" value="job2" #exp (change)="radio()">
+                                <input type="radio" id="job2" name="flavor" value="job2" #exp (change)="radio(11,'exp')">
                                 <label for="job2">1-3 yrs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job3" name="flavor" value="job3" #exp (change)="radio()">
+                                <input type="radio" id="job3" name="flavor" value="job3" #exp (change)="radio(12,'exp')">
                                 <label for="job3">4-6 yrs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job4" name="flavor" value="job4" #exp (change)="radio()">
+                                <input type="radio" id="job4" name="flavor" value="job4" #exp (change)="radio(13,'exp')">
                                 <label for="job4">7-9 yrs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job5" name="flavor" value="job5" #exp (change)="radio()">
+                                <input type="radio" id="job5" name="flavor" value="job5" #exp (change)="radio(14,'exp')">
                                 <label for="job5">9 yrs or more</label><br>
                             </div>
 
@@ -178,27 +178,27 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="radio" id="job" name="flavor" value="job">
+                                <input type="radio" id="job" name="flavor" value="job" (change)="radio(15,'')">
                                 <label for="job">Less than 2 lakhs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job1" name="flavor" value="job1">
+                                <input type="radio" id="job1" name="flavor" value="job1" (change)="radio(16,'')">
                                 <label for="job1">2-4 lakhs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job2" name="flavor" value="job2">
-                                <label for="job2">5-8 lakhs</label><br>
+                                <input type="radio" id="job2" name="flavor" value="job2" (change)="radio(17,'')">
+                                <label for="job2">4-9 lakhs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job3" name="flavor" value="job3">
+                                <input type="radio" id="job3" name="flavor" value="job3" (change)="radio(18,'')">
                                 <label for="job3">9-12 lakhs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job4" name="flavor" value="job4">
+                                <input type="radio" id="job4" name="flavor" value="job4" (change)="radio(19,'')">
                                 <label for="job4">13-16 lakhs</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="radio" id="job5" name="flavor" value="job5">
+                                <input type="radio" id="job5" name="flavor" value="job5" (change)="radio(20,'')">
                                 <label for="job5">17 lakhs or more</label><br>
                             </div>
 
@@ -216,59 +216,59 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check11">
+                                <input type="checkbox" id="check11" [checked]="filterz[21].select" (change)="onChange(21)">
                                 <label for="check1">Full Stack Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check12">
+                                <input type="checkbox" id="check12" [checked]="filterz[22].select" (change)="onChange(22)">
                                 <label for="check2"> UI/UX Designing</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check13">
+                                <input type="checkbox" id="check13" [checked]="filterz[23].select" (change)="onChange(23)">
                                 <label for="check3"> Front-end Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check14">
+                                <input type="checkbox" id="check14" [checked]="filterz[24].select" (change)="onChange(24)">
                                 <label for="check4"> Back-end Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check15">
+                                <input type="checkbox" id="check15" [checked]="filterz[25].select" (change)="onChange(25)">
                                 <label for="check5"> Software developer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check16">
+                                <input type="checkbox" id="check16" [checked]="filterz[26].select" (change)="onChange(26)">
                                 <label for="check6"> Graphic Designing</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check17">
+                                <input type="checkbox" id="check17" [checked]="filterz[27].select" (change)="onChange(27)">
                                 <label for="check7"> Photographer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check18">
+                                <input type="checkbox" id="check18" [checked]="filterz[28].select" (change)="onChange(28)">
                                 <label for="check8"> Marketing manager</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check19">
+                                <input type="checkbox" id="check19" [checked]="filterz[29].select" (change)="onChange(29)">
                                 <label for="check9"> Graphic designer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check20">
+                                <input type="checkbox" id="check20" [checked]="filterz[30].select" (change)="onChange(30)">
                                 <label for="check10"> Dietitian</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check21">
+                                <input type="checkbox" id="check21" [checked]="filterz[31].select" (change)="onChange(31)">
                                 <label for="check11"> Project manager</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check22">
+                                <input type="checkbox" id="check22" [checked]="filterz[32].select" (change)="onChange(32)">
                                 <label for="check12"> Pharmacist</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check23">
+                                <input type="checkbox" id="check23" [checked]="filterz[33].select" (change)="onChange(33)">
                                 <label for="check13"> Accounting</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check24">
+                                <input type="checkbox" id="check24" [checked]="filterz[34].select" (change)="onChange(34)">
                                 <label for="check14"> Banking</label><br>
                             </div>
 
@@ -287,108 +287,93 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check25">
+                                <input type="checkbox" id="check25" [checked]="filterz[35].select" (change)="onChange(35)">
                                 <label for="check1">IBM</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check26">
+                                <input type="checkbox" id="check26" [checked]="filterz[36].select" (change)="onChange(36)">
                                 <label for="check2">
                                     Wipro</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check27">
+                                <input type="checkbox" id="check27" [checked]="filterz[37].select" (change)="onChange(37)">
                                 <label for="check3"> AOL</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check28">
+                                <input type="checkbox" id="check28" [checked]="filterz[38].select" (change)="onChange(38)">
                                 <label for="check4">
                                     Dell</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check29">
+                                <input type="checkbox" id="check29" [checked]="filterz[39].select" (change)="onChange(39)">
                                 <label for="check5">
                                     SAP</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check30">
+                                <input type="checkbox" id="check30" [checked]="filterz[40].select" (change)="onChange(40)">
                                 <label for="check6">
                                     Sage Solutions</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check31">
+                                <input type="checkbox" id="check31" [checked]="filterz[41].select" (change)="onChange(41)">
                                 <label for="check7"> Tata Consultancy Services</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check32">
+                                <input type="checkbox" id="check32" [checked]="filterz[42].select" (change)="onChange(42)">
                                 <label for="check8"> Infosys</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check33">
+                                <input type="checkbox" id="check33" [checked]="filterz[43].select" (change)="onChange(43)">
                                 <label for="check9">Tech Mahindra</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check34">
+                                <input type="checkbox" id="check34" [checked]="filterz[44].select" (change)="onChange(44)">
                                 <label for="check10">
                                     MindTree Ltd</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check35">
+                                <input type="checkbox" id="check35" [checked]="filterz[45].select" (change)="onChange(45)">
                                 <label for="check11">HDFC Bank</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check36">
+                                <input type="checkbox" id="check36" [checked]="filterz[46].select" (change)="onChange(46)">
                                 <label for="check12">
-                                    MphasiS ltd</label><br>
+                                    MphasiS Ltd</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check37">
-                                <label for="check13">
-                                    LTIMindtree</label><br>
-                            </div>
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check38">
-                                <label for="check14">
-                                    MphasiS ltd</label><br>
-                            </div>
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check39">
+                                <input type="checkbox" id="check39" [checked]="filterz[47].select" (change)="onChange(47)">
                                 <label for="check15">
-
                                     Cognizant</label><br>
                             </div>
+
                             <div class="job_input_text">
-                                <input type="checkbox" id="check40">
-                                <label for="check16">
-                                    Oracle Financial Services</label><br>
-                            </div>
-                            <div class="job_input_text">
-                                <input type="checkbox" id="check41">
+                                <input type="checkbox" id="check41" [checked]="filterz[48].select" (change)="onChange(48)">
                                 <label for="check17">
 
                                     Coforge</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check42">
+                                <input type="checkbox" id="check42" [checked]="filterz[49].select" (change)="onChange(49)">
                                 <label for="check18">
                                     Capgemini</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check43">
+                                <input type="checkbox" id="check43" [checked]="filterz[50].select" (change)="onChange(50)">
                                 <label for="check19">
                                     Flipkart</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check44">
+                                <input type="checkbox" id="check44" [checked]="filterz[51].select" (change)="onChange(51)">
                                 <label for="check21">
                                     AWS</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check45">
+                                <input type="checkbox" id="check45" [checked]="filterz[52].select" (change)="onChange(52)">
                                 <label for="check20">
                                     JIO</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check46">
+                                <input type="checkbox" id="check46" [checked]="filterz[53].select" (change)="onChange(53)">
                                 <label for="check22">
                                     American Express</label><br>
                             </div>
