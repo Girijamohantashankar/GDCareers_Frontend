@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { LoaderComponent } from './loader/loader.component';
+import { ViewJobsComponent } from './view-jobs/view-jobs.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LoaderComponent } from './loader/loader.component';
     ResetPasswordComponent,
     FilterPipe,
     LoaderComponent,
+    ViewJobsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

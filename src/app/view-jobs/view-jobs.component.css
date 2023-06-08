@@ -136,6 +136,8 @@
     color: #666666;
     border-bottom: 1px solid #F0F0F0;
     padding-bottom: 13px;
+
+
     cursor: pointer;
 }
 
@@ -190,8 +192,8 @@
 .job_row {
     align-items: start;
     display: grid;
-    gap: 28px;
-    grid-template-columns: repeat(auto-fill, minmax(412px, 1fr));
+    gap: 76px;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
 
 .col-4 {
@@ -213,8 +215,9 @@
 
 .col-4 .card:hover,
 .col-4 .card:focus {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #19A7CE;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .card_bg {
@@ -317,65 +320,12 @@
     padding: 0 135px
 }
 
-.filters {
-    width: 20%;
-    width: 20%;
-    background: rgba(197, 233, 243, 0.4);
-    border-radius: 8px;
-    margin: 10px 20px;
-    padding-left: 10px;
-}
 
-.filters::after {
-    content: '';
-    position: absolute;
-    width: 69px;
-    height: 69px;
-    border-radius: 50%;
-    background: #E4FFFF;
-    box-shadow: -7px 8px 8px rgba(0, 0, 0, 0.08), inset 9px -9px 10px rgba(25, 167, 206, 0.1);
-    left: 50%;
-}
-
-.filters_title {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    gap: 5px;
-    margin-left: 20px;
-}
-
-.filters_title h2 {
-    font-weight: 600;
-    font-size: 24px;
-    color: #444444;
-}
-
-.fillter_list {
-    display: inline-block;
-    padding-left: 30px;
-}
-
-.fillter_list h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    padding: 5px 14px 5px 16px;
-    justify-content: space-between;
-    font-weight: 300;
-    font-size: 13px;
-    color: #222222;
-}
-
-.fillter_list img {
-    cursor: pointer;
-}
 
 .Jobs_Preference {
-    width: 80%;
-    position: relative;
+    /* width: 100%; */
+    /* position: relative; */
+    padding: 0 135px;
 }
 
 .Jobs_Preference .jobs_text::after {
@@ -390,141 +340,6 @@
     top: -10px;
 
 }
-
-.faq-drawer {
-    margin-bottom: 30px;
-}
-
-.faq-drawer__content .job_input_text {
-    display: flex;
-    align-items: center;
-}
-
-.faq-drawer__content .job_input_text input[type="checkbox"],
-.faq-drawer__content .job_input_text label,
-.faq-drawer__content .job_input_text input[type="radio"] {
-    cursor: pointer;
-}
-
-.faq-drawer__content-wrapper {
-    font-weight: 300;
-    font-size: 18px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: 0.25s ease-in-out;
-    color: #777777;
-}
-
-.faq-drawer__title {
-    border-bottom: 1px solid #F1F1F1;
-    cursor: pointer;
-    display: block;
-    font-weight: 500;
-    font-size: 17px;
-    padding-bottom: 20px;
-    position: relative;
-    color: #666666;
-    margin-bottom: 0;
-    transition: all 0.25s ease-out;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-left: 20px;
-}
-
-.faq-drawer__title span {
-    font-weight: 600;
-    font-size: 15px;
-    color: #444444;
-}
-
-.faq-drawer__title::after {
-    border-style: solid;
-    border-width: 2px 2px 0 0;
-    content: " ";
-    display: inline-block;
-    height: 10px;
-    left: 80px;
-    position: relative;
-    right: 20px;
-    transform: rotate(135deg);
-    transition: 0.35s ease-in-out;
-    vertical-align: top;
-    width: 10px;
-}
-
-.drawer__title::after {
-    left: 70px;
-}
-
-.drawer__title1::after {
-    left: 100px;
-}
-
-.drawer__title2::after {
-    left: 20px;
-}
-
-.drawer__title3::after,
-.drawer__title4::after {
-    margin-left: -55px;
-}
-
-.faq-drawer__title:hover {
-    color: #4E4B52;
-}
-
-.job_input_text label {
-    font-weight: 400;
-    font-size: 16px;
-    color: #555555;
-
-}
-
-
-.faq-drawer__content {
-    height: 160px;
-    overflow-y: auto;
-    margin-top: 5px;
-    margin-left: 20px;
-
-}
-
-.faq-drawer__content::-webkit-scrollbar {
-    width: 4px;
-}
-
-.faq-drawer__content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.faq-drawer__content::-webkit-scrollbar-thumb {
-    background: #8B8B8B;
-}
-
-.faq-drawer__content::-webkit-scrollbar-thumb:hover {
-    background: #8B8B8B;
-}
-
-.faq-drawer__trigger:checked+.faq-drawer__title+.faq-drawer__content-wrapper {
-    max-height: 350px;
-}
-
-.faq-drawer__trigger:checked+.faq-drawer__title::after {
-    transform: rotate(-45deg);
-    transition: 0.25s ease-in-out;
-}
-
-input.faq-drawer__trigger[type="checkbox"] {
-    display: none;
-}
-
-.drop_down_fillter {
-    padding-right: 40px;
-}
-
-
-
 
 
 .footer {
@@ -595,18 +410,3 @@ input.faq-drawer__trigger[type="checkbox"] {
     color: #19A7CE;
 }
 
-.fillter_list span {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    padding: 5px 5px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    font-size: 13px;
-    margin-top: 5px;
-}
-
-.fillter_list span img {
-    cursor: pointer;
-    padding-left: 5px;
-}

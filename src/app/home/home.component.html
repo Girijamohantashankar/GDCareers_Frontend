@@ -17,7 +17,7 @@
                         <img src="assets/Images/notification.png" alt="">
                         <img (click)="usersetting()" src="assets/Images/user.png" alt="">
                     </div>
-                    <div class="account_settings" (mouseleave)="accountsettings = false" >
+                    <div class="account_settings" (mouseleave)="accountsettings = false">
                         <div class="account_card" *ngIf="accountsettings">
                             <div class="account_text">
                                 <img src="assets/Images/user.png" alt="">
@@ -50,8 +50,14 @@
             <div class="filters_title">
                 <img src="assets/Images/filter.svg" alt="">
                 <h2>Filters</h2>
-                <div><span *ngFor="let i of select | filter">{{filterz[i].title}}</span></div>
             </div>
+
+
+            <div class="fillter_list">
+                <span *ngFor="let i of select | filter">{{filterz[i].title}}<img src="assets/Images/cross.svg" alt=""></span>
+            </div>
+
+
             <!-- <div class="fillter_list">
                 <h3><span>Forntend Developer</span> <img src="assets/Images/cross.svg" alt=""></h3>
                 <h3><span>Fullstack Developer</span> <img src="assets/Images/cross.svg" alt=""></h3>
@@ -67,11 +73,11 @@
                     </label>
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
-                            <div class="job_input_text" >
+                            <div class="job_input_text">
                                 <input type="checkbox" id="check1" [checked]="filterz[0].select" (change)="onChange(0)">
                                 <label for="check1"> Information Tehnology</label><br>
                             </div>
-                            <div class="job_input_text" >
+                            <div class="job_input_text">
                                 <input type="checkbox" id="check2" [checked]="filterz[1].select" (change)="onChange(1)">
                                 <label for="check2"> Healthcare</label><br>
                             </div>
@@ -97,27 +103,27 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check1">
+                                <input type="checkbox" id="check5">
                                 <label for="check1"> Full Time</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check2">
+                                <input type="checkbox" id="check6">
                                 <label for="check2"> Part Time</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check3">
+                                <input type="checkbox" id="check7">
                                 <label for="check3"> Freelancing</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check4">
+                                <input type="checkbox" id="check8">
                                 <label for="check4"> Finance</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check5">
+                                <input type="checkbox" id="check9">
                                 <label for="check5">Remote Work</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check6">
+                                <input type="checkbox" id="check10">
                                 <label for="check6"> Hybrid</label><br>
                             </div>
                         </div>
@@ -210,59 +216,59 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check1">
+                                <input type="checkbox" id="check11">
                                 <label for="check1">Full Stack Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check2">
+                                <input type="checkbox" id="check12">
                                 <label for="check2"> UI/UX Designing</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check3">
+                                <input type="checkbox" id="check13">
                                 <label for="check3"> Front-end Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check4">
+                                <input type="checkbox" id="check14">
                                 <label for="check4"> Back-end Development</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check5">
+                                <input type="checkbox" id="check15">
                                 <label for="check5"> Software developer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check6">
+                                <input type="checkbox" id="check16">
                                 <label for="check6"> Graphic Designing</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check7">
+                                <input type="checkbox" id="check17">
                                 <label for="check7"> Photographer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check8">
+                                <input type="checkbox" id="check18">
                                 <label for="check8"> Marketing manager</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check9">
+                                <input type="checkbox" id="check19">
                                 <label for="check9"> Graphic designer</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check10">
+                                <input type="checkbox" id="check20">
                                 <label for="check10"> Dietitian</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check11">
+                                <input type="checkbox" id="check21">
                                 <label for="check11"> Project manager</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check12">
+                                <input type="checkbox" id="check22">
                                 <label for="check12"> Pharmacist</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check13">
+                                <input type="checkbox" id="check23">
                                 <label for="check13"> Accounting</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check14">
+                                <input type="checkbox" id="check24">
                                 <label for="check14"> Banking</label><br>
                             </div>
 
@@ -281,108 +287,108 @@
                     <div class="faq-drawer__content-wrapper">
                         <div class="faq-drawer__content">
                             <div class="job_input_text">
-                                <input type="checkbox" id="check1">
+                                <input type="checkbox" id="check25">
                                 <label for="check1">IBM</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check2">
+                                <input type="checkbox" id="check26">
                                 <label for="check2">
                                     Wipro</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check3">
+                                <input type="checkbox" id="check27">
                                 <label for="check3"> AOL</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check4">
+                                <input type="checkbox" id="check28">
                                 <label for="check4">
                                     Dell</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check5">
+                                <input type="checkbox" id="check29">
                                 <label for="check5">
                                     SAP</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check6">
+                                <input type="checkbox" id="check30">
                                 <label for="check6">
                                     Sage Solutions</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check7">
+                                <input type="checkbox" id="check31">
                                 <label for="check7"> Tata Consultancy Services</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check8">
+                                <input type="checkbox" id="check32">
                                 <label for="check8"> Infosys</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check9">
+                                <input type="checkbox" id="check33">
                                 <label for="check9">Tech Mahindra</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check10">
+                                <input type="checkbox" id="check34">
                                 <label for="check10">
                                     MindTree Ltd</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check11">
+                                <input type="checkbox" id="check35">
                                 <label for="check11">HDFC Bank</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check12">
+                                <input type="checkbox" id="check36">
                                 <label for="check12">
                                     MphasiS ltd</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check13">
+                                <input type="checkbox" id="check37">
                                 <label for="check13">
                                     LTIMindtree</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check14">
+                                <input type="checkbox" id="check38">
                                 <label for="check14">
                                     MphasiS ltd</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check15">
+                                <input type="checkbox" id="check39">
                                 <label for="check15">
 
                                     Cognizant</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check16">
+                                <input type="checkbox" id="check40">
                                 <label for="check16">
                                     Oracle Financial Services</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check17">
+                                <input type="checkbox" id="check41">
                                 <label for="check17">
 
                                     Coforge</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check18">
+                                <input type="checkbox" id="check42">
                                 <label for="check18">
                                     Capgemini</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check19">
+                                <input type="checkbox" id="check43">
                                 <label for="check19">
                                     Flipkart</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check21">
+                                <input type="checkbox" id="check44">
                                 <label for="check21">
                                     AWS</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check20">
+                                <input type="checkbox" id="check45">
                                 <label for="check20">
                                     JIO</label><br>
                             </div>
                             <div class="job_input_text">
-                                <input type="checkbox" id="check22">
+                                <input type="checkbox" id="check46">
                                 <label for="check22">
                                     American Express</label><br>
                             </div>

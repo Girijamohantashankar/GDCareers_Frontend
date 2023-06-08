@@ -37,132 +37,63 @@
         </div>
     </div>
 
-
-    <div class="admin_page">
-        <h1>Select an Operation to Perform</h1>
-        <div class="admin_row">
-            <div class="card" (click)="createjob()">
-                <img src="assets/Images/add_job.svg" alt="">
-                <h2>Create a job post</h2>
-            </div>
-            <!-- <div class="card">
-                <img src="assets/Images/pen.svg" alt="">
-                <h2>Update a job post</h2>
-            </div> -->
-            <div class="card" routerLink="/viewJobs">
-                <img src="assets/Images/eye.svg" alt="">
-                <h2>View all jobs</h2>
-            </div>
-        </div>
-        <div class="add_job_modal" *ngIf="Job_added">
-            <div class="popup_modal">
-                <img src="assets/Images/cross.svg" alt="" class="crocc_icon" (click)="close_Modal()">
-                <img src="assets/Images/tick.svg" alt="">
-                <h2>All Done</h2>
-                <p>Job post has been added successfully.</p>
-            </div>
-        </div>
-    
-    </div>
-
-    <div class="Add_Job_Details" *ngIf="addjobdetails">
-        <div class="Add_Job_Details_card">
-            <h1>Add Job Details</h1>
-            <form [formGroup]="addjobForm" (ngSubmit)="onAddjob(addjobForm.value)">
-                <div class="form">
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Job Title</label>
-                            <input type="name" placeholder="Enter the job title " class="form__input" id="name" 
-                            formControlName="JobTitle" />
-                        </div>
-                        <div class="form__group">
-                            <label for="text">Experience</label>
-                            <input type="text" placeholder="E.g. 2-3 yrs" class="form__input" id="name" formControlName="Experience"  />
-                        </div>
-                    </div>
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Company Name</label>
-                            <input type="name" placeholder="Enter the company name" class="form__input" id="name"
-                            formControlName="CompanyName" />
-                        </div>
-                        <div class="form__group">
-                            <label for="name">CTC</label>
-                            <input type="text" placeholder="E.g. 3-5 lakhs" class="form__input" id="name" formControlName="CTC" />
-                        </div>
-                    </div>
-                </div>
-                <div class="form">
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Work Location</label>
-                            <input type="text" placeholder="E.g. Mohali, Punjab" class="form__input" id="name"
-                            formControlName="WorkLocation" />
-                        </div>
-                        <div class="form__group">
-                            <label for="file">Company Logo</label>
-                            <input type="file" placeholder="No file chosen" class="form__input" id="file" required />
-                        </div>
-                    </div>
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Last Date To Apply</label>
-                            <input type="date" placeholder="Enter the job title" class="form__input" id="name"
-                            formControlName="LastDate"/>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="form">
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Job Description</label>
-                            <textarea type="text" placeholder="Type job description here" class="form__input" id="name"
-                            formControlName="JobDescription"></textarea>
-                        </div>
-                    </div>
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Eligibility Criteria</label>
-                            <textarea type="text" placeholder="Type here" class="form__input" id="name"
-                            formControlName="EligibilityCriteria"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="form">
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Responsibilities</label>
-                            <textarea type="text" placeholder="Type here" class="form__input" id="name"
-                            formControlName="Responsibilities"></textarea>
-                        </div>
-                    </div>
-                    <div class="form_input">
-                        <div class="form__group">
-                            <label for="name">Required Skills</label>
-                            <input [(ngModel)]="item" type="text" placeholder="Type here" formControlName="RequiredSkills" class="form__input task_input"
-                                #task>
-                            <button class="add_task" (click)="addtask(task.value)">add task</button>
-                            <ul class="add_input_task">
-                                <li *ngFor="let item of list">{{item.name}}<img src="assets/Images/cross.svg"
-                                        (click)="removetask(item.id)"></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="form_btn">
-                    <button class="add" (click)="jobAdd()" type="submit" [disabled]="this.addjobForm.invalid" >Add</button>
-                    <button class="Cancel" (click)="canclejob()">Cancel</button>
-                </div>
-            </form>
+    <div class="search">
+        <div class="search_input">
+            <input type="text" placeholder="What are you looking for?">
+            <img src="assets/Images/search.png" alt="">
         </div>
     </div>
 
 
 
+    <div class="Jobs_Preference">
+        <h1 class="jobs_text">Jobs as per Your Preferences</h1>
 
+        <div class="job_row">
+            <div class="col-4" routerLink="/job-details">
+                <div class="card">
+                    <div class="card_title">
+                        <div class="card_bg">
+                            <div class="card_text">
+                                <div class="card_company">
+                                    <h1>UI/UX Designer</h1>
+                                    <h2>Cognizant</h2>
+                                </div>
+                                <img src="assets/Images/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="job_details">
+                            <div class="job_details_text">
+                                <img src="assets/Images/1.svg" alt="">
+                                <p>0-2 yrs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/2.svg" alt="">
+                                <p>4.20-5.02 Lakhs</p>
+                            </div>
+                            <div class="job_details_text">
+                                <img src="assets/Images/3.svg" alt="">
+                                <p>Mohali, Punjab</p>
+                            </div>
+                        </div>
+                        <h4>We are seeking a talented and experienced Full Stack Developer to join our dynamic team.
+                            As a Full...</h4>
+                        <h5></h5>
+                        <div class="share">
+                            <img src="assets/Images/edit.svg" alt="">
+                            <img src="assets/Images/delete.svg" alt="">
+                            <img src="assets/Images/bookmark.svg" alt="">
+                            <img src="assets/Images/4.svg" alt="">
+                            <h3 routerLink="/job-details"><u>see more</u></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer_content">
@@ -227,12 +158,8 @@
                             </defs>
                         </svg>
                         Near LPU, Jalandhar</a></li>
+
             </div>
         </div>
     </footer>
-
-    
-
-
-
 </div>

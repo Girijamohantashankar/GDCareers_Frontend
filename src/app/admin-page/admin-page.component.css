@@ -546,3 +546,6 @@ form {
     font-size: 16px;
     color: #666666;
 }
+input.ng-dirty.ng-invalid {
+    border-color: red
+}

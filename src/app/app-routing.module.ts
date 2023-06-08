@@ -11,6 +11,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ViewJobsComponent } from './view-jobs/view-jobs.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'loader',
     component: LoaderComponent,
+  },
+  {
+    path: 'viewJobs',
+    component: ViewJobsComponent,
   },
 ];
 
