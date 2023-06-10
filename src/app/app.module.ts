@@ -17,6 +17,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { FilterPipe } from './pipe/filter.pipe';
 import { LoaderComponent } from './loader/loader.component';
 import { ViewJobsComponent } from './view-jobs/view-jobs.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,8 @@ import { ViewJobsComponent } from './view-jobs/view-jobs.component';
     LoaderComponent,
     ViewJobsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

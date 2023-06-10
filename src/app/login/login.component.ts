@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BackendlinkService } from '../service/backendlink.service';
+import {  CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  constructor(public service: BackendlinkService,public cookie : CookieService,public router:Router){}
   loginForm = new FormGroup({
     email: new FormControl('', [
       Validators.required,
@@ -24,9 +28,7 @@ export class LoginComponent {
     ]),
   });
 
-  onLogin(data: any) {
-    console.log(this.loginForm.value);
-  }
+
   showPassword = false;
   showPasswordIcon = 'fa-eye-slash';
   Forgotshow = false;
@@ -46,5 +48,22 @@ export class LoginComponent {
   closeIncorrectModal:boolean=false;
   closeIncorrect() {
     this.closeIncorrectModal=true;
+  }
+
+
+  //login
+  onLogin(data: any) {
+    console.log(this.loginForm.value);
+    this.service.login(data).subscribe((res:any)=>{
+      if (res.message=='login successful') {
+        var expiredDate = new Date();
+        expiredDate.setDate(expiredDate.getDate() + 7);
+        this.cookie.set('token', res.token,expiredDate);
+        this.cookie.set('email', res.email);
+        this.router.navigate(['home']);      }
+      else{
+        this.router.navigate(['/login']);
+      }
+    })
   }
 }
